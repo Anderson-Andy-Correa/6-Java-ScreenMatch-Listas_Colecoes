@@ -24,8 +24,12 @@ public class PrincipalListas {
         lista.add(lost);
         for (Titulo item: lista) {
             System.out.print(item.getNome() + " | ");
-            Filme filme = (Filme) item;
-            System.out.println("Classificação: " + filme.getClassificacao());
+            if (item instanceof Filme filme && filme.getClassificacao() > 2) {
+                System.out.println("Classificação: " + filme.getClassificacao());
+            } else {
+                System.out.println("None");
+            }
+
         }
 //        lista.forEach(System.out::println);
     }
