@@ -5,7 +5,7 @@ import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collections;
 
 public class PrincipalListas {
     public static void main(String[] args) {
@@ -32,6 +32,24 @@ public class PrincipalListas {
 
         }
 //        lista.forEach(System.out::println);
+
+        var buscaArtisca = new ArrayList<String>();
+        buscaArtisca.add("Adam Sandler");
+        buscaArtisca.add("Paulo");
+        buscaArtisca.add("Jacqueline");
+        buscaArtisca.add("Andy");
+        System.out.println(buscaArtisca);
+
+        Collections.sort(buscaArtisca);
+        System.out.println(" --- Depois da Ordenação ---  ");
+        System.out.println(buscaArtisca);
+
+        System.out.println(" ---------------------------- ");
+        System.out.println(lista);
+        Collections.sort(lista);
+        System.out.println(" --- Depois da Ordenação ---  ");
+        System.out.println(lista);
+
     }
 
 }
