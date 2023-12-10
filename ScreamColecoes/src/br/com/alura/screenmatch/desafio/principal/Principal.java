@@ -1,6 +1,6 @@
 package br.com.alura.screenmatch.desafio.principal;
 
-import br.com.alura.screenmatch.desafio.modelos.Cartao;
+import br.com.alura.screenmatch.desafio.modelos.CartaoDeCredito;
 import br.com.alura.screenmatch.desafio.modelos.Compra;
 
 import java.math.BigDecimal;
@@ -17,7 +17,7 @@ public class Principal {
         Scanner scan = new Scanner(System.in);
 
         System.out.print("Qual é o limite do cartão? R$");
-        var cartao = new Cartao(scan.nextBigDecimal());
+        var cartao = new CartaoDeCredito(scan.nextBigDecimal());
         scan.nextLine();
 
         for (;;) {

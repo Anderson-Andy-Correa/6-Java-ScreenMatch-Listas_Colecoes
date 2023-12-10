@@ -5,23 +5,25 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class Cartao {
+public class CartaoDeCredito {
     private BigDecimal limite;
+    private BigDecimal saldo;
     private List<Compra> compras;
 
-    public Cartao(BigDecimal limite) {
+    public CartaoDeCredito(BigDecimal limite) {
         this.limite = limite;
+        this.saldo = limite;
         this.compras = new ArrayList<>();
     }
 
     public void comprarItem(Compra item) {
-        if (this.limite.compareTo(item.getPreco()) < 0) {
+        if (this.saldo.compareTo(item.getPreco()) < 0) {
             System.out.println("Compra negada! Valor do produto maior que o Limite.");
             return;
             }
-        this.limite = limite.subtract(item.getPreco());
+        this.saldo = saldo.subtract(item.getPreco());
         compras.add(item);
-        System.out.printf("Limite disponível: R$%.2f \n", this.limite);
+        System.out.printf("Saldo disponível: R$%.2f \n", this.saldo);
     }
 
     public String listarCompras() {
@@ -37,6 +39,10 @@ public class Cartao {
         return limite;
     }
 
+    public BigDecimal getSaldo() {
+        return saldo;
+    }
+
     public List<Compra> getCompras() {
         return compras;
     }
@@ -45,7 +51,8 @@ public class Cartao {
     public String toString() {
         return "----------------------------------\n" +
                 "Limite atual: " + String.format("R$%.2f", this.limite) + "\n" +
-                "Itens Comprados: \n" + this.listarCompras() +
+                "Itens Comprados: \n" + this.listarCompras() + "\n" +
+                "Saldo Disponível: " + String.format("R$%.2f", this.saldo) + "\n" +
                 "----------------------------------";
     }
 }

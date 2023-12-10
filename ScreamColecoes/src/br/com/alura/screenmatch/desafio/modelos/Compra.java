@@ -3,16 +3,16 @@ package br.com.alura.screenmatch.desafio.modelos;
 import java.math.BigDecimal;
 
 public class Compra {
-    private String nomeItem;
+    private String descricao;
     private BigDecimal preco;
 
-    public Compra(String nomeItem, BigDecimal preco) {
-        this.nomeItem = nomeItem;
+    public Compra(String descricao, BigDecimal preco) {
+        this.descricao = descricao;
         this.preco = preco;
     }
 
-    public String getNomeItem() {
-        return nomeItem;
+    public String getDescricao() {
+        return descricao;
     }
 
     public BigDecimal getPreco() {
@@ -21,6 +21,6 @@ public class Compra {
 
     @Override
     public String toString() {
-        return getNomeItem() + " → " + String.format("R$%.2f", getPreco());
+        return getDescricao() + " → " + String.format("R$%.2f", getPreco());
     }
 }
