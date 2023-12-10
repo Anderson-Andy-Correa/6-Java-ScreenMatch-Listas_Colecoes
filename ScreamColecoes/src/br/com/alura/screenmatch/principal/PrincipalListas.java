@@ -4,9 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalListas {
     public static void main(String[] args) {
@@ -18,7 +16,7 @@ public class PrincipalListas {
         filmeDoPaulo.avalia(10);
         var lost = new Serie("Lost", 2000);
 
-        var lista = new ArrayList<Titulo>();
+        List<Titulo> lista = new ArrayList<>();
         lista.add(filmeDoPaulo);
         lista.add(meuFilme);
         lista.add(outroFilme);
