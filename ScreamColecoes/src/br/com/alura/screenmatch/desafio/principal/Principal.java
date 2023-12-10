@@ -29,7 +29,7 @@ public class Principal {
             BigDecimal valorCompra = scan.nextBigDecimal();
             scan.nextLine();
 
-            cartao.comprarItem(new Compra(descricaoCompra, valorCompra));
+            System.out.println(cartao.comprarItem(new Compra(descricaoCompra, valorCompra)));
 
             System.out.println("----------------------------------");
             String continuar = null;
